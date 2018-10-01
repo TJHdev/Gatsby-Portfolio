@@ -5,8 +5,8 @@ import Layout from '../components/layout';
 
 const SecondPage = () => (
   <Layout>
-    <h1>Hi from the third page</h1>
-    <p>Welcome to page 3</p>
+    <h1>Hi from the fourth page</h1>
+    <p>Welcome to page 4</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );

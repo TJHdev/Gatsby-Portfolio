@@ -13,19 +13,16 @@ const HeaderContainer = styled.div`
   padding: 1.45rem 1.0875rem;
 `;
 
+const PageLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`;
+
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
+        <PageLink to="/">{siteTitle}</PageLink>
       </h1>
     </HeaderContainer>
   </HeaderWrapper>
