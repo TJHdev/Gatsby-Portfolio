@@ -14,7 +14,7 @@ html {
 
 @media only screen and (min-width: 112.5em) {
   html {
-    font-size: 70%;
+    font-size: 62.5%;
   }
 }
 
@@ -38,7 +38,7 @@ html {
 
 body {
   box-sizing: border-box; /* box sizing box model changes the box model so that border and padding are no longer added to the total width or total height that we specify for a box */
-  padding: 3em;
+  padding: 0em;
 }
 
 h1 {
