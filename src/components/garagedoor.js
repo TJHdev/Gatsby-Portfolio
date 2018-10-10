@@ -3,14 +3,27 @@ import styled from 'styled-components';
 import background from '../images/background-large.jpeg';
 
 const BackgroundWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   left: 0;
   top: 0;
   overflow: hidden;
-  z-index: 1;
+  z-index: 24;
+
+  perspective: 10rem;
+  transition: all 2s ease;
+
+  transform-origin: top;
+
+  transform: ${props =>
+    props.garageDoorUp ? 'rotateX(90deg)' : 'rotateX(0deg)'};
 `;
+
+// transform: ${props =>
+//   props.hidden
+//     ? 'translate(-400%, var(--verticalOffset))'
+//     : 'translate(calc(-50%), var(--verticalOffset))'};
 
 const Background = styled.img`
   position: absolute;
@@ -20,18 +33,22 @@ const Background = styled.img`
   z-index: 1;
 `;
 
-const HeroButton = styled.button`
+const HeroButtonContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 4px), calc(-50% - 120px));
   z-index: 10;
+`;
+
+const Button = styled.button`
+  z-index: 25;
 
   font-weight: 800;
   background-color: white;
   color: black;
   border: black solid 1.5px;
-  border-radius: 5px;
+  // border-radius: 5px;
   padding: 0.3rem;
   text-transform: uppercase;
   transition: all ease-in 0.1s;
@@ -46,7 +63,7 @@ const HeroButton = styled.button`
   }
 
   &:active {
-    transform: translate(calc(-50% - 4px), calc(-50% - 118px));
+    transform: translate(0px, 2px);
   }
 `;
 
@@ -56,10 +73,10 @@ const IntroTextContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 4px), 10px);
-  z-index: 10;
   font-weight: 800;
   font-size: 2rem;
   width: 330px;
+  z-index: 15;
   text-align: center;
 `;
 
@@ -75,7 +92,7 @@ const IntroText = styled.p`
     props.hidden
       ? 'translate(-400%, var(--verticalOffset))'
       : 'translate(calc(-50%), var(--verticalOffset))'};
-  z-index: 10;
+  z-index: 15;
   width: 330px;
 `;
 
@@ -84,19 +101,28 @@ class Garagedoor extends React.Component {
     super(props);
     this.state = {
       hidden: true,
+      garageDoorUp: true,
     };
   }
 
-  handleClick = () => {
+  showText = () => {
     this.setState({ hidden: false });
   };
 
+  toggleGarage = () => {
+    this.setState(prevState => ({
+      garageDoorUp: !prevState.garageDoorUp,
+    }));
+  };
+
   render() {
-    const { hidden } = this.state;
+    const { hidden, garageDoorUp } = this.state;
     return (
-      <BackgroundWrapper>
+      <BackgroundWrapper garageDoorUp={garageDoorUp}>
         <Background src={background} alt="background image" />
-        <HeroButton onClick={this.handleClick}>Need a hero?</HeroButton>
+        <HeroButtonContainer>
+          <Button onClick={this.showText}>Need a hero?</Button>
+        </HeroButtonContainer>
         <IntroTextContainer hidden={hidden}>
           <IntroText
             hidden={hidden}
@@ -123,7 +149,9 @@ class Garagedoor extends React.Component {
             delay="3.5s"
             verticalOff="140px"
           >
-            Scroll down to find out more.
+            Click
+            <Button onClick={this.toggleGarage}> here </Button>
+            to find out more.
           </IntroText>
         </IntroTextContainer>
       </BackgroundWrapper>
