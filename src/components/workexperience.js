@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import background from '../images/background-inside-garage.jpg';
 
 import jesmond from '../images/jesmond.jpg';
-import hull from '../images/hull_university.jpg';
+import webdev from '../images/web-dev.jpg';
 import adti from '../images/adti.jpg';
 import engie from '../images/engie.jpg';
 
@@ -35,9 +35,18 @@ const WorkExpBackgroundImage = styled.img`
 
 // Heading
 // **************
-const HeadingContainer = styled.div`
+
+const HeadingBackground = styled.div`
   background-color: rgba(1, 1, 1, 0.8);
-  height: 100px;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 330px;
+  padding: 1rem;
+  margin: 0 auto;
+`;
+
+const Heading = styled.h1`
+  color: white;
 `;
 
 // Cards contents
@@ -76,7 +85,10 @@ const WorkExperience = () => (
   <WorkExpContainer>
     <WorkExpBackgroundImage src={background} />
     <div className="row">
-      <HeadingContainer />
+      <HeadingBackground>
+        <Heading>Engineering Experience</Heading>
+        <HorizontalRule />
+      </HeadingBackground>
     </div>
     <div className="row">
       <div className="col-1-of-4">
@@ -91,25 +103,10 @@ const WorkExperience = () => (
               Jesmond Engineering was a summer placement in Structural Analysis
               of aircraft. During this placement I was tasked to create some
               automated excel spread sheet outputs and a batch file to automate
-              tasks while we were out of the office.
+              tasks while we were out of the office. This is where I started
+              gaining interest in programming as a career path.
             </WorkExpCardText>
           </div>
-        </WorkExpCard>
-      </div>
-      <div className="col-1-of-4">
-        <WorkExpCard>
-          <WorkExpCardImg src={hull} />
-          <WorkExpCardTitle>
-            The University of Hull
-            <HorizontalRule />
-          </WorkExpCardTitle>
-          <WorkExpCardText>
-            I studied a 4 year MEng Mechanical Engineering degree at the
-            University of Hull. The course featured a wide variety of modules
-            from C programming, machine workshop training to lectures on
-            engineering management. I Graduated in 2014 with a 1st class
-            honours.
-          </WorkExpCardText>
         </WorkExpCard>
       </div>
       <div className="col-1-of-4">
@@ -143,6 +140,22 @@ const WorkExperience = () => (
           <WorkExpCardText>
             My role at Engie was Mechanical Design Engineer on a combined
             heating and power station.
+          </WorkExpCardText>
+        </WorkExpCard>
+      </div>
+      <div className="col-1-of-4">
+        <WorkExpCard>
+          <WorkExpCardImg src={webdev} />
+          <WorkExpCardTitle>
+            Web Development
+            <HorizontalRule />
+          </WorkExpCardTitle>
+          <WorkExpCardText>
+            From May 2018, I have been retraining full-time as a web developer.
+            My main target has been to gain a strong grasp of JavaScript, with a
+            secondary goal of becoming familiar with the current JavaScript
+            ecosystem and popular frameworks. The skills section below
+            highlights the technologies I am familiar with.
           </WorkExpCardText>
         </WorkExpCard>
       </div>

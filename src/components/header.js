@@ -58,14 +58,14 @@ const NavButton = styled.button`
   }
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <HeaderWrapper>
     <HeaderContainer>
-      <MobileNavButtonContainer align="right">
-        <NavButton>Go outside</NavButton>
+      <MobileNavButtonContainer>
         <NavButton>Experience</NavButton>
+        <NavButton>Skills</NavButton>
       </MobileNavButtonContainer>
-      <MobileNavButtonContainer align="left">
+      <MobileNavButtonContainer>
         <NavButton>Portfolio</NavButton>
         <NavButton>Contact</NavButton>
       </MobileNavButtonContainer>
