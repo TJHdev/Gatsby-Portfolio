@@ -10,11 +10,8 @@ import engie from '../images/engie.jpg';
 // Background and main container
 // **************
 const WorkExpContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100vw;
-  height: 100vh;
   padding: 10rem 0;
   overflow: hidden;
 }
@@ -37,7 +34,7 @@ const WorkExpBackgroundImage = styled.img`
 // **************
 
 const HeadingBackground = styled.div`
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.5rem;
   text-align: center;
   width: 330px;
@@ -52,16 +49,17 @@ const Heading = styled.h1`
 // Cards contents
 // **************
 const WorkExpCard = styled.div`
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 
   &:hover {
     transform: scale(1.15);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1);
   }
 `;
 const WorkExpCardImg = styled.img`

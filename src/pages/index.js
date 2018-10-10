@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import Layout from '../components/layout';
 import Garagedoor from '../components/garagedoor';
 import WorkExperience from '../components/workexperience';
+import Skills from '../components/skills';
 import Portfolio from '../components/portfolio';
 
 const blackTheme = {
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Layout>
       <Garagedoor />
       <WorkExperience />
+      <Skills />
       <Portfolio />
     </Layout>
   </ThemeProvider>

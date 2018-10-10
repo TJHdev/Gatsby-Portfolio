@@ -2,12 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PortfolioContainer = styled.div`
-  position: absolute;
-  top: 100vh;
+  position: relative;
   left: 0;
   width: 100vw;
-  height: 100vh;
-  padding: 20rem 0;
   overflow: hidden;
 }
 `;
