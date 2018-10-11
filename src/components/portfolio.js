@@ -3,82 +3,70 @@ import styled from 'styled-components';
 
 const PortfolioContainer = styled.div`
   position: relative;
-  left: 0;
+  left: 0 ;
   width: 100vw;
-  overflow: hidden;
+  max-width: 100%;
+  height: 100vh;
 }
 `;
 
 const PortfolioCard = styled.div`
-  background-color: rgba(1, 1, 1, 0.8);
-  color: white;
-  font-size: 1.5rem;
-  padding: 2.5rem;
-  text-align: center;
-  border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  transition: all 0.3s;
+position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+
+
+  width: 1000px;
+	margin: 30px auto;
+	background-color: rgba(0,0,0,0.8);
+	
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(9, 1fr);
+	grid-gap: 5px;
+	
+	grid-auto-rows: 80px;
+	grid-auto-flow: row;
+	grid-auto-columns: .5fr; 
+	
+	align-items: center;
+  justify-items: center;
+  
+  @media only screen and (max-width: 75em) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+  }
+
+  @media only screen and (max-width: 45em) {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 320px;
+    margin: 50px auto;
+    padding: 25px;
+  }
+}
 `;
+
 const PortfolioCardImg = styled.img``;
 const PortfolioCardTitle = styled.h3``;
 const PortfolioCardText = styled.p``;
 
 const Portfolio = () => (
   <PortfolioContainer>
-    <div className="row">
-      <div className="col-1-of-4">
-        <PortfolioCard>
-          <PortfolioCardImg src="" />
-          <PortfolioCardTitle>Jesmond Engineering</PortfolioCardTitle>
-          <PortfolioCardText>
-            Jesmond Engineering was a summer placement in Structural Analysis of
-            aircraft. During this placement I was tasked to create some
-            automated excel spread sheet outputs and a batch file to automate
-            tasks while we were out of the office.
-          </PortfolioCardText>
-        </PortfolioCard>
-      </div>
-      <div className="col-1-of-4">
-        <PortfolioCard>
-          <PortfolioCardImg src="" />
-          <PortfolioCardTitle>The University of Hull</PortfolioCardTitle>
-          <PortfolioCardText>
-            I studied a 4 year MEng Mechanical Engineering degree at the
-            University of Hull. The course featured many different areas of
-            focus, from basic C programming, machine workshop training and
-            modules in Engineering Management. I Graduated in 2014 with a 1st
-            class honours.
-          </PortfolioCardText>
-        </PortfolioCard>
-      </div>
-      <div className="col-1-of-4">
-        <PortfolioCard>
-          <PortfolioCardImg src="" />
-          <PortfolioCardTitle>
-            Applied Drilling Technology International
-          </PortfolioCardTitle>
-          <PortfolioCardText>
-            Immediately after graduating I worked offshore as a trainee drilling
-            engineer. This was a great learning experience, involving training
-            in helicopter emergyency escape, fire fighting and directing cranes.
-            The shift pattern and environment was tiring and solidified a good
-            work ethic.
-            <br />
-            Unfortunatly the company was liquidated during the oil price crash
-            in 2015.
-          </PortfolioCardText>
-        </PortfolioCard>
-      </div>
-      <div className="col-1-of-4">
-        <PortfolioCard>
-          <PortfolioCardImg src="" />
-          <PortfolioCardTitle>Engie</PortfolioCardTitle>
-          <PortfolioCardText>
-            My role at Engie was Mechanical Design Engineer
-          </PortfolioCardText>
-        </PortfolioCard>
-      </div>
-    </div>
+    <PortfolioCard>
+      <PortfolioCardImg />
+
+      <PortfolioCardTitle>Expensify</PortfolioCardTitle>
+      <PortfolioCardText>
+        React front end with Firebase backend to keep track of your expenses.
+      </PortfolioCardText>
+    </PortfolioCard>
   </PortfolioContainer>
 );
 

@@ -12,6 +12,7 @@ import engie from '../images/engie.jpg';
 const WorkExpContainer = styled.div`
   position: relative;
   width: 100vw;
+  max-width: 100%;
   padding: 10rem 0;
   overflow: hidden;
 }
@@ -51,7 +52,7 @@ const Heading = styled.h1`
 const WorkExpCard = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
@@ -98,11 +99,12 @@ const WorkExperience = () => (
               <HorizontalRule />
             </WorkExpCardTitle>
             <WorkExpCardText>
-              Jesmond Engineering was a summer placement in Structural Analysis
-              of aircraft. During this placement I was tasked to create some
-              automated excel spread sheet outputs and a batch file to automate
-              tasks while we were out of the office. This is where I started
-              gaining interest in programming as a career path.
+              This was a summer placement as a Structural Analyst with focus in
+              the aerospace industry. The placement involved heavy use of Excel
+              and Visual Basic for stress calculations and modeling. This
+              placement kick-started my interest in programming through
+              developing small batch files to automate tasks, saving my
+              colleagues time.
             </WorkExpCardText>
           </div>
         </WorkExpCard>
@@ -116,14 +118,11 @@ const WorkExperience = () => (
           </WorkExpCardTitle>
 
           <WorkExpCardText>
-            Immediately after graduating I worked offshore as a trainee drilling
-            engineer. This was a great learning experience, involving training
-            in helicopter emergyency escape, fire fighting and directing cranes.
-            The shift pattern and environment was tiring and solidified a good
-            work ethic.
-            <br />
-            Unfortunately the company was liquidated during the oil price crash
-            in 2015.
+            Immediately after graduating I started work as a trainee drilling
+            engineer. The work environment and shift pattern were challenging.
+            However, this instilled a strong work ethic and the experience
+            gained working in a team were invaluable. Unfortunately ADTI was
+            liquidated during the oil price crash in 2015.
           </WorkExpCardText>
         </WorkExpCard>
       </div>
@@ -136,8 +135,13 @@ const WorkExperience = () => (
           </WorkExpCardTitle>
 
           <WorkExpCardText>
-            My role at Engie was Mechanical Design Engineer on a combined
-            heating and power station.
+            My job title at Engie was Mechanical Design Engineer on a combined
+            heating and power station. This position required strong problem
+            solving skills in order to understand how the existing mechanical
+            systems worked for integration of new equipment. Frequent
+            communcation with multiple stake holders was required to keep
+            project moving forward, this greatly improved my project management
+            and people skills.
           </WorkExpCardText>
         </WorkExpCard>
       </div>

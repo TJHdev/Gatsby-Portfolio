@@ -6,6 +6,7 @@ const BackgroundWrapper = styled.div`
   position: fixed;
   height: 100vh;
   width: 100vw;
+  max-width: 100%;
   left: 0;
   top: 0;
   overflow: hidden;
@@ -101,7 +102,7 @@ class Garagedoor extends React.Component {
     super(props);
     this.state = {
       hidden: true,
-      garageDoorUp: true,
+      garageDoorUp: false,
     };
   }
 
