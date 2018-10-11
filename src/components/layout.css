@@ -70,6 +70,10 @@ h5 {
 h6 {
 }
 
+.center {
+  text-align: center;
+}
+
 .row {
   max-width: var(--grid-width);
   margin: 0 auto;

@@ -15,6 +15,8 @@ const WorkExpContainer = styled.div`
   max-width: 100%;
   padding: 10rem 0;
   overflow: hidden;
+
+  padding-top: 15rem;
 }
 `;
 const WorkExpBackgroundImage = styled.img`
@@ -35,16 +37,19 @@ const WorkExpBackgroundImage = styled.img`
 // **************
 
 const HeadingBackground = styled.div`
+  display: inline-block;
+
   background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 330px;
-  padding: 1rem;
-  margin: 0 auto;
+  font-size: 1.3rem;
+
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: auto;
+  border: 3px solid white;
 `;
 
 const Heading = styled.h1`
   color: white;
+  text-transform: uppercase;
 `;
 
 // Cards contents
@@ -83,7 +88,7 @@ const HorizontalRule = styled.hr`
 const WorkExperience = () => (
   <WorkExpContainer>
     <WorkExpBackgroundImage src={background} />
-    <div className="row">
+    <div className="row center">
       <HeadingBackground>
         <Heading>Engineering Experience</Heading>
         <HorizontalRule />

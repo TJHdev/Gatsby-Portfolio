@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import TJHlogo from '../images/TJHlogo.svg';
+
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -16,9 +18,10 @@ const HeaderWrapper = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 1000px;
-  min-width: 100px;
+  min-height: 70px;
   padding: 1rem 0.5rem;
 `;
 
@@ -29,8 +32,13 @@ const PageLink = styled(Link)`
 
 const MobileNavButtonContainer = styled.div``;
 
+const IconContainer = styled.img`
+  height: 60px;
+  margin: 1.5rem;
+`;
+
 const NavButton = styled.button`
-  width: 90px;
+  width: 85px;
 
   z-index: 10;
 
@@ -39,8 +47,7 @@ const NavButton = styled.button`
   background-color: black;
   color: white;
   border: white solid 1px;
-  // border-radius: 5px;
-  padding: 0.1rem;
+  padding: 0.5rem;
   margin: 0.3rem;
   text-transform: uppercase;
   transition: all ease-in 0.1s;
@@ -61,14 +68,15 @@ const NavButton = styled.button`
 
 const Header = () => (
   <HeaderWrapper>
+    <IconContainer src={TJHlogo} />
     <HeaderContainer>
       <MobileNavButtonContainer>
+        <NavButton>Go outside</NavButton>
         <NavButton>Experience</NavButton>
-        <NavButton>Skills</NavButton>
       </MobileNavButtonContainer>
       <MobileNavButtonContainer>
+        <NavButton>Skills</NavButton>
         <NavButton>Portfolio</NavButton>
-        <NavButton>Contact</NavButton>
       </MobileNavButtonContainer>
     </HeaderContainer>
   </HeaderWrapper>

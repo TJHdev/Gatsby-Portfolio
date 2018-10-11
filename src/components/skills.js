@@ -27,20 +27,24 @@ const SkillsContainer = styled.div`
   width: 100vw;
   max-width: 100%;
 
-  padding: 15rem 0;
+  min-height: 60vh;
+  padding-top: 5rem;
 `;
 
 const SkillsHeadingBackground = styled.div`
+  display: inline-block;
+
   background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100px;
-  padding: 1rem;
-  margin: 0 auto;
+  font-size: 1.3rem;
+
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: auto;
+  border: 3px solid white;
 `;
 
 const SkillsHeading = styled.h1`
   color: white;
+  text-transform: uppercase;
 `;
 
 const HorizontalRule = styled.hr`
@@ -86,9 +90,13 @@ const SkillsIconsContainer = styled.div`
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
-    width: 320px;
+    width: 300px;
     margin: 50px auto;
-    padding: 25px;
+    padding: 30px;
+  }
+
+  @media only screen and (max-width: 35em) {
+    padding: 5px;
   }
 }
 `;
@@ -143,6 +151,7 @@ const SkillsDescription = styled.div`
   width: 220px;
 
   @media only screen and (max-width: 45em) {
+    font-size: 1.5rem;
     width: 140px;
     left: -30px;
     top: 30px;
@@ -159,7 +168,7 @@ const SkillsText = styled.p`
 
 const Skills = () => (
   <SkillsContainer>
-    <div className="row">
+    <div className="row center">
       <SkillsHeadingBackground>
         <SkillsHeading>Skills</SkillsHeading>
         <HorizontalRule />

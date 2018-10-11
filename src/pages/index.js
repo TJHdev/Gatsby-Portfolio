@@ -7,6 +7,7 @@ import Garagedoor from '../components/garagedoor';
 import WorkExperience from '../components/workexperience';
 import Skills from '../components/skills';
 import Portfolio from '../components/portfolio';
+import Footer from '../components/footer';
 
 const blackTheme = {
   primary: 'red',
@@ -19,6 +20,7 @@ const IndexPage = () => (
       <WorkExperience />
       <Skills />
       <Portfolio />
+      <Footer />
     </Layout>
   </ThemeProvider>
 );

@@ -16,23 +16,26 @@ const PortfolioContainer = styled.div`
   width: 100vw;
   max-width: 100%;
 
-  padding: 15rem 0;
+  min-height: 80vh;
+  padding-top: 5rem;
 }
 `;
 
 // Heading
 const PortfolioHeadingBackground = styled.div`
+  display: inline-block;
+
   background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 160px;
-  padding: 1rem;
-  margin: 0 auto;
-  margin-bottom: 10rem;
+  font-size: 1.3rem;
+
+  padding: 0.5rem 1rem 1rem 1rem;
+  margin: auto;
+  border: 3px solid white;
 `;
 
 const PortfolioHeading = styled.h1`
   color: white;
+  text-transform: uppercase;
 `;
 
 const HorizontalRule = styled.hr`
@@ -51,7 +54,8 @@ const PortfolioCardGrid = styled.div`
 
 
   width: 1000px;
-	margin: 30px auto;
+  margin: 30px auto;
+  margin-top: 10rem;
 	background-color: rgba(0,0,0,0.8);
 	
 	display: grid;
@@ -134,10 +138,12 @@ const PortfolioCardText = styled.p``;
 
 const Portfolio = () => (
   <PortfolioContainer>
-    <PortfolioHeadingBackground>
-      <PortfolioHeading>Portfolio</PortfolioHeading>
-      <HorizontalRule />
-    </PortfolioHeadingBackground>
+    <div className="center">
+      <PortfolioHeadingBackground>
+        <PortfolioHeading>Portfolio</PortfolioHeading>
+        <HorizontalRule />
+      </PortfolioHeadingBackground>
+    </div>
     <PortfolioCardGrid>
       <PortfolioCard>
         <PortfolioCardOverlay
