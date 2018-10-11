@@ -102,7 +102,7 @@ class Garagedoor extends React.Component {
     super(props);
     this.state = {
       hidden: true,
-      garageDoorUp: false,
+      garageDoorUp: true,
     };
   }
 

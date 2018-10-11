@@ -26,7 +26,8 @@ const SkillsContainer = styled.div`
 
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+
+  padding: 15rem 0;
 `;
 
 const SkillsHeadingBackground = styled.div`

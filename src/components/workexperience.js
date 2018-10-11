@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import background from '../images/background-inside-garage.jpg';
 
-import jesmond from '../images/jesmond.jpg';
-import webdev from '../images/web-dev.jpg';
-import adti from '../images/adti.jpg';
-import engie from '../images/engie.jpg';
+import jesmond from '../images/workexperience/jesmond.jpg';
+import webdev from '../images/workexperience/web-dev.jpg';
+import adti from '../images/workexperience/adti.jpg';
+import engie from '../images/workexperience/engie.jpg';
 
 // Background and main container
 // **************

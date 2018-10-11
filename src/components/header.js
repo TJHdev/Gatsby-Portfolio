@@ -75,24 +75,3 @@ const Header = () => (
 );
 
 export default Header;
-
-/*
- <HeaderWrapper>
-    <HeaderContainer>
-      <div className="row">
-        <div className="col-1-of-4">
-          <NavButton>Go outside</NavButton>
-        </div>
-        <div className="col-1-of-4">
-          <NavButton>Experience</NavButton>
-        </div>
-        <div className="col-1-of-4">
-          <NavButton>Portfolio</NavButton>
-        </div>
-        <div className="col-1-of-4">
-          <NavButton>Contact</NavButton>
-        </div>
-      </div>
-    </HeaderContainer>
-  </HeaderWrapper>
-*/
