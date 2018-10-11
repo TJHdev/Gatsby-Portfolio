@@ -26,21 +26,21 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e680ad3e2c3e61d8c4b8.js"
+    "url": "webpack-runtime-27a1c28d89cb14c97702.js"
   },
   {
-    "url": "app-2703f1b27bb56b515f88.js"
+    "url": "app-d7d9b2408624b48a12fc.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-c9c937b9491619a6493b.js"
   },
   {
     "url": "index.html",
-    "revision": "f514660cca7ae82c65c0160c6305e9c9"
+    "revision": "df2459ef11e7824ce8a3f481d889246d"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "62caaa6bd7d3f3dab2ba6f1508e0cda3"
+    "revision": "ac2a5ad39b58277810db54161d89c7b1"
   },
   {
     "url": "component---src-pages-index-js.d5e54f60832cb5a49ca9.css"
@@ -49,7 +49,7 @@ self.__precacheManifest = [
     "url": "component---src-pages-index-js-d3290dc70abe3bd3826a.js"
   },
   {
-    "url": "0-cf30f6af47797af4c449.js"
+    "url": "0-b4a9eb25382e6a17ebde.js"
   },
   {
     "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -77,7 +77,7 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Gatsby-Portfolio/offline-plugin-app-shell-fallback/index.html", {
+workbox.routing.registerNavigationRoute("/https://github.com/TJHdev/offline-plugin-app-shell-fallback/index.html", {
   whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
