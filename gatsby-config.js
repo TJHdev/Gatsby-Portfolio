@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/Gatsby-Portfolio`,
   siteMetadata: {
     title: 'Thomas Hanna Portfolio',
   },
