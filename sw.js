@@ -26,40 +26,40 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-46348ed7ae47df1bb8a3.js"
+    "url": "webpack-runtime-cd2c6e164c8ede558384.js"
   },
   {
-    "url": "app-f64c83d2108f0e8c5740.js"
+    "url": "app-4f7aa49820066c7ea39d.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-c9c937b9491619a6493b.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-6eb585ddef981db16c66.js"
   },
   {
     "url": "index.html",
-    "revision": "e99535b7f26a52bdb17d9e30b1680a90"
+    "revision": "b36f2f787230411d700ea1e36f7c223a"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c915d00484e626caab035b8a10380a3a"
+    "revision": "d84a1cb18557a97cbd4cfe9f7a78d8ae"
   },
   {
-    "url": "component---src-pages-index-js.d5e54f60832cb5a49ca9.css"
+    "url": "component---src-pages-index-js.d2694a919557e9ba5db8.css"
   },
   {
-    "url": "component---src-pages-index-js-d3290dc70abe3bd3826a.js"
+    "url": "component---src-pages-index-js-df2ddb5fe32fc2664bdd.js"
   },
   {
-    "url": "0-2a9d6e2c6fbe6019e039.js"
+    "url": "0-5cd26e67f0678da39148.js"
   },
   {
     "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
     "revision": "c2508676a2f33ea9f1f0bf472997f9a0"
   },
   {
-    "url": "component---src-pages-404-js.d5e54f60832cb5a49ca9.css"
+    "url": "component---src-pages-404-js.d2694a919557e9ba5db8.css"
   },
   {
-    "url": "component---src-pages-404-js-40e20c5279d03669969c.js"
+    "url": "component---src-pages-404-js-32ce4ed0d2c4b7ff5063.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -77,7 +77,7 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/portfolio/offline-plugin-app-shell-fallback/index.html", {
+workbox.routing.registerNavigationRoute("/Gatsby-Portfolio/offline-plugin-app-shell-fallback/index.html", {
   whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
