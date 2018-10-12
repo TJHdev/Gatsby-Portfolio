@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import TJHlogo from '../images/TJHlogo.svg';
@@ -23,11 +22,6 @@ const HeaderContainer = styled.div`
   max-width: 1000px;
   min-height: 70px;
   padding: 1rem 0.5rem;
-`;
-
-const PageLink = styled(Link)`
-  color: white;
-  text-decoration: none;
 `;
 
 const MobileNavButtonContainer = styled.div``;

@@ -108,8 +108,7 @@ const WorkExperience = () => (
               the aerospace industry. The placement involved heavy use of Excel
               and Visual Basic for stress calculations and modeling. This
               placement kick-started my interest in programming through
-              developing small batch files to automate tasks, saving my
-              colleagues time.
+              developing small batch files to automate tasks.
             </WorkExpCardText>
           </div>
         </WorkExpCard>
@@ -123,8 +122,8 @@ const WorkExperience = () => (
           </WorkExpCardTitle>
 
           <WorkExpCardText>
-            Immediately after graduating I started work as a trainee drilling
-            engineer. The work environment and shift pattern were challenging.
+            Immediately after graduating I started work as a Trainee Drilling
+            Engineer. The work environment and shift pattern were challenging.
             However, this instilled a strong work ethic and the experience
             gained working in a team were invaluable. Unfortunately ADTI was
             liquidated during the oil price crash in 2015.
