@@ -20,11 +20,6 @@ const BackgroundWrapper = styled.div`
     props.garageDoorUp ? 'rotateX(90deg)' : 'rotateX(0deg)'};
 `;
 
-// transform: ${props =>
-//   props.hidden
-//     ? 'translate(-400%, var(--verticalOffset))'
-//     : 'translate(calc(-50%), var(--verticalOffset))'};
-
 const Background = styled.img`
   position: absolute;
   top: 50%;
@@ -51,7 +46,7 @@ const Button = styled.button`
   // border-radius: 5px;
   padding: 0.3rem;
   text-transform: uppercase;
-  transition: all ease-in 0.1s;
+  transition: transform ease-in 0.1s;
 
   outline: none;
 
@@ -73,6 +68,7 @@ const IntroTextContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 4px), 10px);
+  transition: all 1s ease-in;
   font-weight: 800;
   font-size: 2rem;
   width: 330px;
@@ -83,25 +79,25 @@ const IntroTextContainer = styled.div`
 const IntroText = styled.p`
   --verticalOffset: ${props => props.verticalOff}
   display: block;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  transition: transform 1.5s cubic-bezier(0, 0.45, 0.26, 1) ${props =>
-    props.delay};
-  transform: ${props =>
-    props.hidden
-      ? 'translate(-400%, var(--verticalOffset))'
-      : 'translate(calc(-50%), var(--verticalOffset))'};
+
   z-index: 15;
   width: 330px;
 `;
+// transition: transform 1.5s cubic-bezier(0, 0.45, 0.26, 1) ${props =>
+//   props.delay};
+// transform: ${props =>
+//   props.hidden
+//     ? 'translate(-400%, var(--verticalOffset))'
+//     : 'translate(calc(-50%), var(--verticalOffset))'};
 
 class Garagedoor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       hidden: true,
-      garageDoorUp: false,
     };
   }
 
@@ -109,14 +105,9 @@ class Garagedoor extends React.Component {
     this.setState({ hidden: false });
   };
 
-  toggleGarage = () => {
-    this.setState(prevState => ({
-      garageDoorUp: !prevState.garageDoorUp,
-    }));
-  };
-
   render() {
-    const { hidden, garageDoorUp } = this.state;
+    const { garageDoorUp, action } = this.props;
+    const { hidden } = this.state;
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
         <Background src={background} alt="background image" />
@@ -150,7 +141,7 @@ class Garagedoor extends React.Component {
             verticalOff="140px"
           >
             Click
-            <Button onClick={this.toggleGarage}> here </Button>
+            <Button onClick={action}> here </Button>
             to find out more.
           </IntroText>
         </IntroTextContainer>
