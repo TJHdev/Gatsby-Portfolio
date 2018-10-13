@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'gatsby';
 import background from '../images/background-large.jpeg';
 
 const BackgroundWrapper = styled.div`
@@ -12,18 +13,22 @@ const BackgroundWrapper = styled.div`
   z-index: 24;
 
   perspective: 10rem;
-  transition: all 2s ease;
-
+  transition: transform 2s ease;
   transform-origin: top;
 
   transform: ${props =>
     props.garageDoorUp ? 'rotateX(90deg)' : 'rotateX(0deg)'};
 `;
 
+const BackgroundContainer = styled.div`
+  transition: all 0s;
+`;
+
 const Background = styled.img`
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
+  width: 100vw;
   transform: translate(-50%, -50%);
   z-index: 1;
 `;
@@ -110,7 +115,9 @@ class Garagedoor extends React.Component {
     const { hidden } = this.state;
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
-        <Background src={background} alt="background image" />
+        <BackgroundContainer>
+          <Background src={background} alt="background image" />
+        </BackgroundContainer>
         <HeroButtonContainer>
           <Button onClick={this.showText}>Need a hero?</Button>
         </HeroButtonContainer>
@@ -149,6 +156,11 @@ class Garagedoor extends React.Component {
     );
   }
 }
+
+Garagedoor.propTypes = {
+  garageDoorUp: PropTypes.boolean.isRequired,
+  action: PropTypes.func.isRequired,
+};
 
 export default Garagedoor;
 

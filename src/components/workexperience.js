@@ -23,7 +23,6 @@ const WorkExpBackgroundImage = styled.img`
   position: fixed;
   top: 0;
   left: 0;
-  background-size: cover;
   height: 100vh;
   width: 100vw;
   z-index: -1;
