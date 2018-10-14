@@ -16,7 +16,7 @@ const PortfolioContainer = styled.div`
   width: 100vw;
   max-width: 100%;
 
-  min-height: 80vh;
+
   padding-top: 5rem;
 }
 `;

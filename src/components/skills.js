@@ -27,7 +27,6 @@ const SkillsContainer = styled.div`
   width: 100vw;
   max-width: 100%;
 
-  min-height: 60vh;
   padding-top: 5rem;
 `;
 

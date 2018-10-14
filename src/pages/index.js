@@ -1,6 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import scrollToComponent from 'react-scroll-to-component';
 
 import Layout from '../components/layout';
 import Garagedoor from '../components/garagedoor';
@@ -32,7 +32,6 @@ const HeaderContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   max-width: 1000px;
-  min-height: 70px;
   padding: 1rem 0.5rem;
 `;
 
@@ -59,6 +58,8 @@ const NavButton = styled.button`
   transition: all ease-in 0.1s;
 
   outline: none;
+
+  cursor: pointer;
 
   &:hover,
   &:active {
@@ -97,37 +98,41 @@ class IndexPage extends React.Component {
                 <NavButton onClick={this.toggleGarage}>Go outside</NavButton>
 
                 <NavButton
-                  onClick={() =>
-                    scrollToComponent(this.experience, {
-                      align: 'top',
-                      duration: 1000,
-                    })
-                  }
+                  onClick={() => {
+                    const node3 = ReactDOM.findDOMNode(this).children[2];
+                    node3.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'start',
+                    });
+                  }}
                 >
                   Experience
                 </NavButton>
               </MobileNavButtonContainer>
               <MobileNavButtonContainer>
                 <NavButton
-                  onClick={() =>
-                    scrollToComponent(this.skills, {
-                      offset: -100,
-                      align: 'top',
-                      duration: 1000,
-                    })
-                  }
+                  onClick={() => {
+                    const node2 = ReactDOM.findDOMNode(this).children[3];
+                    node2.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center',
+                      inline: 'end',
+                    });
+                  }}
                 >
                   Skills
                 </NavButton>
 
                 <NavButton
-                  onClick={() =>
-                    scrollToComponent(this.portfolio, {
-                      offset: -100,
-                      align: 'top',
-                      duration: 1000,
-                    })
-                  }
+                  onClick={() => {
+                    const node3 = ReactDOM.findDOMNode(this).children[4];
+                    node3.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                      inline: 'start',
+                    });
+                  }}
                 >
                   Portfolio
                 </NavButton>
@@ -135,21 +140,9 @@ class IndexPage extends React.Component {
             </HeaderContainer>
           </HeaderWrapper>
           <Garagedoor garageDoorUp={garageDoorUp} action={this.toggleGarage} />
-          <WorkExperience
-            ref={section => {
-              this.experience = section;
-            }}
-          />
-          <Skills
-            ref={section => {
-              this.skills = section;
-            }}
-          />
-          <Portfolio
-            ref={section => {
-              this.portfolio = section;
-            }}
-          />
+          <WorkExperience />
+          <Skills />
+          <Portfolio />
           <Footer />
         </Layout>
       </ThemeProvider>

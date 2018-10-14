@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'gatsby';
+import PropTypes from 'prop-types';
 import background from '../images/background-large.jpeg';
 
 const BackgroundWrapper = styled.div`
@@ -12,23 +12,23 @@ const BackgroundWrapper = styled.div`
   overflow: hidden;
   z-index: 24;
 
-  perspective: 10rem;
   transition: transform 2s ease;
   transform-origin: top;
 
   transform: ${props =>
-    props.garageDoorUp ? 'rotateX(90deg)' : 'rotateX(0deg)'};
+    props.garageDoorUp ? 'rotateX(90deg) scale(1.6)' : 'rotateX(0deg)'};
 `;
 
-const BackgroundContainer = styled.div`
-  transition: all 0s;
-`;
+const BackgroundContainer = styled.div``;
 
 const Background = styled.img`
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 100vw;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
   transform: translate(-50%, -50%);
   z-index: 1;
 `;
@@ -51,7 +51,9 @@ const Button = styled.button`
   // border-radius: 5px;
   padding: 0.3rem;
   text-transform: uppercase;
-  transition: transform ease-in 0.1s;
+  transition: transform 1s ease-in 0.1s;
+
+  cursor: pointer;
 
   outline: none;
 
@@ -68,51 +70,47 @@ const Button = styled.button`
 `;
 
 const IntroTextContainer = styled.div`
-  display: block;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(calc(-50% - 4px), 10px);
-  transition: all 1s ease-in;
+  top: 53%;
+
   font-weight: 800;
   font-size: 2rem;
   width: 330px;
-  z-index: 15;
+  z-index: 30;
   text-align: center;
 `;
 
 const IntroText = styled.p`
-  --verticalOffset: ${props => props.verticalOff}
-  display: block;
-  position: relative;
-  top: 50%;
-  left: 50%;
+  --verticalOffset: ${props => props.verticalOff};
 
-  z-index: 15;
+  z-index: 30;
+  position: relative;
+
+  z-index: 30;
   width: 330px;
+
+  transition: all 1.5s cubic-bezier(0, 0.45, 0.26, 1) ${props => props.delay};
+
+  transform: ${props =>
+    props.isHidden ? 'translate(-500%, 0px)' : 'translate(-50%, 0px)'};
 `;
-// transition: transform 1.5s cubic-bezier(0, 0.45, 0.26, 1) ${props =>
-//   props.delay};
-// transform: ${props =>
-//   props.hidden
-//     ? 'translate(-400%, var(--verticalOffset))'
-//     : 'translate(calc(-50%), var(--verticalOffset))'};
 
 class Garagedoor extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true,
+      isHidden: true,
     };
   }
 
   showText = () => {
-    this.setState({ hidden: false });
+    this.setState({ isHidden: false });
   };
 
   render() {
     const { garageDoorUp, action } = this.props;
-    const { hidden } = this.state;
+    const { isHidden } = this.state;
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
         <BackgroundContainer>
@@ -121,36 +119,23 @@ class Garagedoor extends React.Component {
         <HeroButtonContainer>
           <Button onClick={this.showText}>Need a hero?</Button>
         </HeroButtonContainer>
-        <IntroTextContainer hidden={hidden}>
-          <IntroText
-            hidden={hidden}
-            direction="left"
-            delay=".5s"
-            verticalOff="10px"
-          >
+        <IntroTextContainer>
+          <IntroText isHidden={isHidden} delay=".5s" verticalOff="10px">
             Then you've come to the wrong place...
           </IntroText>
           <br />
-          <IntroText
-            hidden={hidden}
-            direction="left"
-            delay="2s"
-            verticalOff="50px"
-          >
+          <IntroText isHidden={isHidden} delay="2s" verticalOff="50px">
             I can, however build you fully responsive websites, using the latest
             and greatest techniques.
           </IntroText>
           <br />
-          <IntroText
-            hidden={hidden}
-            direction="bottom"
-            delay="3.5s"
-            verticalOff="140px"
-          >
-            Click
-            <Button onClick={action}> here </Button>
-            to find out more.
-          </IntroText>
+          <IntroText isHidden={isHidden} delay="3.5s" verticalOff="140px">
+            Click 
+{' '}
+<Button onClick={action}> here </Button>
+{' '}
+to find out more.
+</IntroText>
         </IntroTextContainer>
       </BackgroundWrapper>
     );
@@ -158,7 +143,7 @@ class Garagedoor extends React.Component {
 }
 
 Garagedoor.propTypes = {
-  garageDoorUp: PropTypes.boolean.isRequired,
+  garageDoorUp: PropTypes.bool.isRequired,
   action: PropTypes.func.isRequired,
 };
 

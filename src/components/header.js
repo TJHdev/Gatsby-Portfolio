@@ -20,7 +20,6 @@ const HeaderContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   max-width: 1000px;
-  min-height: 70px;
   padding: 1rem 0.5rem;
 `;
 
