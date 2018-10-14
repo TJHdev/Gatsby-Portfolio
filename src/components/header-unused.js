@@ -8,7 +8,7 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   width: 100vw;
   max-width: 100%;
-  z-index: 9;
+  z-index: 16;
   position: fixed;
   background: rgba(0.05, 0.05, 0.05, 0.9);
   margin-bottom: 1.45rem;
@@ -33,7 +33,7 @@ const IconContainer = styled.img`
 const NavButton = styled.button`
   width: 85px;
 
-  z-index: 10;
+  z-index: 16;
 
   font-size: 1rem;
   font-weight: 800;

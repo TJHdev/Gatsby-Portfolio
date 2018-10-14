@@ -20,7 +20,7 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   width: 100vw;
   max-width: 100%;
-  z-index: 9;
+  z-index: 15;
   position: fixed;
   background: rgba(0.05, 0.05, 0.05, 0.9);
   margin-bottom: 1.45rem;
@@ -45,7 +45,7 @@ const IconContainer = styled.img`
 const NavButton = styled.button`
   width: 85px;
 
-  z-index: 10;
+  z-index: 15;
 
   font-size: 1rem;
   font-weight: 800;
@@ -76,7 +76,7 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      garageDoorUp: false,
+      garageDoorUp: true,
     };
   }
 
@@ -99,8 +99,8 @@ class IndexPage extends React.Component {
 
                 <NavButton
                   onClick={() => {
-                    const node3 = ReactDOM.findDOMNode(this).children[2];
-                    node3.scrollIntoView({
+                    const node = ReactDOM.findDOMNode(this).children[2];
+                    node.scrollIntoView({
                       behavior: 'smooth',
                       block: 'start',
                       inline: 'start',
@@ -113,8 +113,8 @@ class IndexPage extends React.Component {
               <MobileNavButtonContainer>
                 <NavButton
                   onClick={() => {
-                    const node2 = ReactDOM.findDOMNode(this).children[3];
-                    node2.scrollIntoView({
+                    const node = ReactDOM.findDOMNode(this).children[3];
+                    node.scrollIntoView({
                       behavior: 'smooth',
                       block: 'center',
                       inline: 'end',
@@ -126,8 +126,8 @@ class IndexPage extends React.Component {
 
                 <NavButton
                   onClick={() => {
-                    const node3 = ReactDOM.findDOMNode(this).children[4];
-                    node3.scrollIntoView({
+                    const node = ReactDOM.findDOMNode(this).children[4];
+                    node.scrollIntoView({
                       behavior: 'smooth',
                       block: 'start',
                       inline: 'start',

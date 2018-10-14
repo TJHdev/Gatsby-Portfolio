@@ -101,7 +101,7 @@ const SkillsIconsContainer = styled.div`
 `;
 
 const SkillsIcon = styled.img`
-  z-index: 16;
+  z-index: 10;
   width: 80px;
   // background-color: rgba(100, 100, 100, 0.6);
 
@@ -118,7 +118,7 @@ const SkillsIcon = styled.img`
   }
 
   &:hover + div {
-    z-index: 15;
+    z-index: 10;
     color: rgba(255, 255, 255, 1);
     display: block;
     transform: scale(1);
