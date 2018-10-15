@@ -1,49 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import blogapp from '../images/portfolio/blogapp.jpg';
-import chatapp from '../images/portfolio/chatapp.jpg';
-import yelpcamp from '../images/portfolio/yelpcamp.jpg';
-import expensify from '../images/portfolio/expensify.jpg';
-import quotegen from '../images/portfolio/quotegen.jpg';
-import weatherapp from '../images/portfolio/weatherapp.jpg';
-import wikiapi from '../images/portfolio/wikiapi.jpg';
-import twitchapi from '../images/portfolio/twitchapi.jpg';
+// styled components
+import SectionContainer from '../styled-components/SectionContainer';
+import Heading from '../common-components/Heading';
 
-const PortfolioContainer = styled.div`
-  position: relative;
-
-  width: 100vw;
-  max-width: 100%;
-
-
-  padding-top: 5rem;
-}
-`;
-
-// Heading
-const PortfolioHeadingBackground = styled.div`
-  display: inline-block;
-
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.3rem;
-
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: auto;
-  border: 3px solid white;
-`;
-
-const PortfolioHeading = styled.h1`
-  color: white;
-  text-transform: uppercase;
-`;
-
-const HorizontalRule = styled.hr`
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #333, #ccc, #333);
-`;
+// images
+import blogapp from '../../images/portfolio/blogapp.jpg';
+import chatapp from '../../images/portfolio/chatapp.jpg';
+import yelpcamp from '../../images/portfolio/yelpcamp.jpg';
+import expensify from '../../images/portfolio/expensify.jpg';
+import quotegen from '../../images/portfolio/quotegen.jpg';
+import weatherapp from '../../images/portfolio/weatherapp.jpg';
+import wikiapi from '../../images/portfolio/wikiapi.jpg';
+import twitchapi from '../../images/portfolio/twitchapi.jpg';
 
 // Images grid
 const PortfolioCardGrid = styled.div`
@@ -137,12 +107,9 @@ const PortfolioCardTitle = styled.h3`
 const PortfolioCardText = styled.p``;
 
 const Portfolio = () => (
-  <PortfolioContainer>
-    <div className="center">
-      <PortfolioHeadingBackground>
-        <PortfolioHeading>Portfolio</PortfolioHeading>
-        <HorizontalRule />
-      </PortfolioHeadingBackground>
+  <SectionContainer>
+    <div className="row center">
+      <Heading heading="Portfolio" />
     </div>
 
     <PortfolioCardGrid>
@@ -268,7 +235,7 @@ const Portfolio = () => (
         <PortfolioCardImg src={wikiapi} />
       </PortfolioCard>
     </PortfolioCardGrid>
-  </PortfolioContainer>
+  </SectionContainer>
 );
 
 export default Portfolio;

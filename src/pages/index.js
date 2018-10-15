@@ -4,9 +4,9 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import Layout from '../components/layout';
 import Garagedoor from '../components/garagedoor';
-import WorkExperience from '../components/workexperience';
-import Skills from '../components/skills';
-import Portfolio from '../components/portfolio';
+import WorkExperience from '../components/sections/workexperience';
+import Skills from '../components/sections/skills';
+import Portfolio from '../components/sections/portfolio';
 import Footer from '../components/footer';
 
 import TJHlogo from '../images/TJHlogo.svg';
@@ -76,7 +76,7 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      garageDoorUp: false,
+      garageDoorUp: true,
     };
   }
 
@@ -116,8 +116,8 @@ class IndexPage extends React.Component {
                     const node = ReactDOM.findDOMNode(this).children[3];
                     node.scrollIntoView({
                       behavior: 'smooth',
-                      block: 'center',
-                      inline: 'end',
+                      block: 'start',
+                      inline: 'start',
                     });
                   }}
                 >

@@ -1,24 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import background from '../images/background-inside-garage.jpg';
+import background from '../../images/background-inside-garage.jpg';
 
-import jesmond from '../images/workexperience/jesmond.jpg';
-import webdev from '../images/workexperience/web-dev.jpg';
-import adti from '../images/workexperience/adti.jpg';
-import engie from '../images/workexperience/engie.jpg';
+// styled components
+import SectionContainer from '../styled-components/SectionContainer';
+import Heading from '../common-components/Heading';
+import HorizontalRule from '../styled-components/HorizontalRule';
+import WorkExperienceCard from '../common-components/WorkExpCard';
+
+// images
+import jesmond from '../../images/workexperience/jesmond.jpg';
+import webdev from '../../images/workexperience/web-dev.jpg';
+import adti from '../../images/workexperience/adti.jpg';
+import engie from '../../images/workexperience/engie.jpg';
 
 // Background and main container
 // **************
-const WorkExpContainer = styled.div`
-  position: relative;
-  width: 100vw;
-  max-width: 100%;
-  padding: 10rem 0;
-  overflow: hidden;
-
-  padding-top: 15rem;
-}
-`;
 const WorkExpBackgroundImage = styled.img`
   position: fixed;
   top: 0;
@@ -32,27 +29,6 @@ const WorkExpBackgroundImage = styled.img`
   background: cover;
 `;
 
-// Heading
-// **************
-
-const HeadingBackground = styled.div`
-  display: inline-block;
-
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.3rem;
-
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: auto;
-  border: 3px solid white;
-`;
-
-const Heading = styled.h1`
-  color: white;
-  text-transform: uppercase;
-`;
-
-// Cards contents
-// **************
 const WorkExpCard = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -67,50 +43,29 @@ const WorkExpCard = styled.div`
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1);
   }
 `;
+
 const WorkExpCardImg = styled.img`
   width: 100%;
   height: 20%;
 `;
+
 const WorkExpCardTitle = styled.h3`
   padding: 1rem 2rem 0 2rem;
 `;
+
 const WorkExpCardText = styled.p`
   padding: 1rem 2rem 2rem 2rem;
 `;
-const HorizontalRule = styled.hr`
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #333, #ccc, #333);
-`;
 
 const WorkExperience = () => (
-  <WorkExpContainer>
+  <SectionContainer>
     <WorkExpBackgroundImage src={background} />
     <div className="row center">
-      <HeadingBackground>
-        <Heading>Engineering Experience</Heading>
-        <HorizontalRule />
-      </HeadingBackground>
+      <Heading heading="Engineering Experience" />
     </div>
     <div className="row">
       <div className="col-1-of-4">
-        <WorkExpCard>
-          <WorkExpCardImg src={jesmond} />
-          <div>
-            <WorkExpCardTitle>
-              Jesmond Engineering
-              <HorizontalRule />
-            </WorkExpCardTitle>
-            <WorkExpCardText>
-              This was a summer placement as a Structural Analyst with focus in
-              the aerospace industry. The placement involved heavy use of Excel
-              and Visual Basic for stress calculations and modeling. This
-              placement kick-started my interest in programming through
-              developing small batch files to automate tasks.
-            </WorkExpCardText>
-          </div>
-        </WorkExpCard>
+        <WorkExperienceCard imgPath={jesmond} />
       </div>
       <div className="col-1-of-4">
         <WorkExpCard>
@@ -165,7 +120,7 @@ const WorkExperience = () => (
         </WorkExpCard>
       </div>
     </div>
-  </WorkExpContainer>
+  </SectionContainer>
 );
 
 export default WorkExperience;

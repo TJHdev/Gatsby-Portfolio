@@ -1,57 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import iconCss from '../images/icons/css-3.svg';
-import iconEs6 from '../images/icons/es6.svg';
-import iconFirebase from '../images/icons/firebase.svg';
-import iconGit from '../images/icons/git-icon.svg';
-import iconGithub from '../images/icons/github-icon.svg';
-import iconHeroku from '../images/icons/heroku.svg';
-import iconHtml5 from '../images/icons/html-5.svg';
-import iconJS from '../images/icons/javascript.svg';
-import iconJest from '../images/icons/jest.svg';
-import iconMocha from '../images/icons/mocha.svg';
-import iconMongo from '../images/icons/mongodb-original.svg';
-import iconNodeJS from '../images/icons/nodejs-icon.svg';
-import iconNpm from '../images/icons/npm.svg';
-import iconPostman from '../images/icons/postman.svg';
-import iconReact from '../images/icons/react.svg';
-import iconRedux from '../images/icons/redux.svg';
-import iconSass from '../images/icons/sass.svg';
-import iconWebpack from '../images/icons/webpack.svg';
+// styled components
+import SectionContainer from '../styled-components/SectionContainer';
+import Heading from '../common-components/Heading';
 
-const SkillsContainer = styled.div`
-  position: relative;
-  left: 0;
-
-  width: 100vw;
-  max-width: 100%;
-
-  padding-top: 5rem;
-`;
-
-const SkillsHeadingBackground = styled.div`
-  display: inline-block;
-
-  background-color: rgba(0, 0, 0, 0.8);
-  font-size: 1.3rem;
-
-  padding: 0.5rem 1rem 1rem 1rem;
-  margin: auto;
-  border: 3px solid white;
-`;
-
-const SkillsHeading = styled.h1`
-  color: white;
-  text-transform: uppercase;
-`;
-
-const HorizontalRule = styled.hr`
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #333, #ccc, #333);
-`;
+// images
+import iconCss from '../../images/icons/css-3.svg';
+import iconEs6 from '../../images/icons/es6.svg';
+import iconFirebase from '../../images/icons/firebase.svg';
+import iconGit from '../../images/icons/git-icon.svg';
+import iconGithub from '../../images/icons/github-icon.svg';
+import iconHeroku from '../../images/icons/heroku.svg';
+import iconHtml5 from '../../images/icons/html-5.svg';
+import iconJS from '../../images/icons/javascript.svg';
+import iconJest from '../../images/icons/jest.svg';
+import iconMocha from '../../images/icons/mocha.svg';
+import iconMongo from '../../images/icons/mongodb-original.svg';
+import iconNodeJS from '../../images/icons/nodejs-icon.svg';
+import iconNpm from '../../images/icons/npm.svg';
+import iconPostman from '../../images/icons/postman.svg';
+import iconReact from '../../images/icons/react.svg';
+import iconRedux from '../../images/icons/redux.svg';
+import iconSass from '../../images/icons/sass.svg';
+import iconWebpack from '../../images/icons/webpack.svg';
 
 const SkillsIconsContainer = styled.div`
   position: relative;
@@ -166,12 +138,9 @@ const SkillsText = styled.p`
 `;
 
 const Skills = () => (
-  <SkillsContainer>
+  <SectionContainer>
     <div className="row center">
-      <SkillsHeadingBackground>
-        <SkillsHeading>Skills</SkillsHeading>
-        <HorizontalRule />
-      </SkillsHeadingBackground>
+      <Heading heading="Skills" />
     </div>
     <SkillsIconsContainer>
       <div>
@@ -391,7 +360,7 @@ const Skills = () => (
         </SkillsDescriptionContainer>
       </div>
     </SkillsIconsContainer>
-  </SkillsContainer>
+  </SectionContainer>
 );
 
 export default Skills;

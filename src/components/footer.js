@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+// styled components
+import HorizontalRule from './styled-components/HorizontalRule';
+
+// images
 import linkedin from '../images/footer/linkedin.svg';
 import email from '../images/footer/email.svg';
 import github from '../images/icons/github-icon.svg';
@@ -42,13 +46,6 @@ const SocialMediaLink = styled.a``;
 const SocialMediaIcon = styled.img`
   height: 50px;
   margin: 1rem;
-`;
-
-const HorizontalRule = styled.hr`
-  border: 0;
-  height: 1px;
-  background: #333;
-  background-image: linear-gradient(to right, #333, #ccc, #333);
 `;
 
 const Copyright = styled.p`
