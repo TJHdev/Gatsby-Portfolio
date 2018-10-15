@@ -204,7 +204,7 @@ const Skills = () => (
           <SkillsDescription>
             <SkillsTitle>HTML 5</SkillsTitle>
             <SkillsText>
-              HTML 5 is the markup language for the browser.
+              HTML 5 is the mark-up language for the browser.
             </SkillsText>
           </SkillsDescription>
         </SkillsDescriptionContainer>
@@ -215,7 +215,7 @@ const Skills = () => (
           <SkillsDescription>
             <SkillsTitle>CSS 3</SkillsTitle>
             <SkillsText>
-              Cascading Style Sheets 3, it the latest version of the language
+              Cascading Style Sheets 3, is the latest version of the language
               used to add visual spice to a website
             </SkillsText>
           </SkillsDescription>
@@ -227,7 +227,7 @@ const Skills = () => (
           <SkillsDescription>
             <SkillsTitle>Sass</SkillsTitle>
             <SkillsText>
-              Sass is a widely used extension language for CSS.
+              Sass is a widely-used extension language for CSS.
             </SkillsText>
           </SkillsDescription>
         </SkillsDescriptionContainer>
@@ -264,7 +264,7 @@ const Skills = () => (
             <SkillsText>
               React is a view library built by Facebook, released in 2013. It
               aims to enable complex & dynamic websites to be built using
-              reusable components.
+              re-usable components.
             </SkillsText>
           </SkillsDescription>
         </SkillsDescriptionContainer>
@@ -311,7 +311,7 @@ const Skills = () => (
           <SkillsDescription>
             <SkillsTitle>Jest</SkillsTitle>
             <SkillsText>
-              Is a testing library developed by Facebook aimed enabling
+              Is a testing library developed by Facebook aimed at enabling
               efficient testing of the React and React Native applications.
             </SkillsText>
           </SkillsDescription>
@@ -360,7 +360,7 @@ const Skills = () => (
           <SkillsDescription>
             <SkillsTitle>Heroku</SkillsTitle>
             <SkillsText>
-              Is a popular cloud platform that enables building, delivery
+              Is a popular cloud platform that enables building, delivery,
               monitoring and scaling of applications.
             </SkillsText>
           </SkillsDescription>

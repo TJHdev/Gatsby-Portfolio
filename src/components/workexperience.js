@@ -139,10 +139,10 @@ const WorkExperience = () => (
 
           <WorkExpCardText>
             My job title at Engie was Mechanical Design Engineer on a combined
-            heating and power station. This position required strong problem
-            solving skills in order to understand how the existing mechanical
-            systems worked for integration of new equipment. Frequent
-            communcation with multiple stake holders was required to keep
+            heating and power station. This position required strong
+            problem-solving skills in order to understand how the existing
+            mechanical systems worked for integration of new equipment. Frequent
+            communcation with multiple stake holders was required to keep the
             project moving forward, this greatly improved my project management
             and people skills.
           </WorkExpCardText>
@@ -160,7 +160,7 @@ const WorkExperience = () => (
             My main target has been to gain a strong grasp of JavaScript, with a
             secondary goal of becoming familiar with the current JavaScript
             ecosystem and popular frameworks. The skills section below
-            highlights the technologies I am familiar with.
+            highlights the technologies with which I am familiar.
           </WorkExpCardText>
         </WorkExpCard>
       </div>

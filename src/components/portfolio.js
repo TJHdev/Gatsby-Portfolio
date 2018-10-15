@@ -144,52 +144,8 @@ const Portfolio = () => (
         <HorizontalRule />
       </PortfolioHeadingBackground>
     </div>
+
     <PortfolioCardGrid>
-      <PortfolioCard>
-        <PortfolioCardOverlay
-          href="https://blog-app-tjh.herokuapp.com/"
-          target="_blank"
-        >
-          <PortfolioTextContainer>
-            <PortfolioCardTitle>BlogApp</PortfolioCardTitle>
-            <PortfolioCardText>
-              Blog site, built with a react front end with Firebase backend.
-            </PortfolioCardText>
-          </PortfolioTextContainer>
-        </PortfolioCardOverlay>
-        <PortfolioCardImg src={blogapp} />
-      </PortfolioCard>
-
-      <PortfolioCard>
-        <PortfolioCardOverlay
-          href="https://websock-chat-app.herokuapp.com/"
-          target="_blank"
-        >
-          <PortfolioTextContainer>
-            <PortfolioCardTitle>ChatApp</PortfolioCardTitle>
-            <PortfolioCardText>
-              Real time websock chat app built on NodeJS backend.
-            </PortfolioCardText>
-          </PortfolioTextContainer>
-        </PortfolioCardOverlay>
-        <PortfolioCardImg src={chatapp} />
-      </PortfolioCard>
-
-      <PortfolioCard>
-        <PortfolioCardOverlay
-          href="https://infinite-tor-55070.herokuapp.com/"
-          target="_blank"
-        >
-          <PortfolioTextContainer>
-            <PortfolioCardTitle>YelpCamp</PortfolioCardTitle>
-            <PortfolioCardText>
-              Website for sharing camp sites, build with NodeJS & Express.
-            </PortfolioCardText>
-          </PortfolioTextContainer>
-        </PortfolioCardOverlay>
-        <PortfolioCardImg src={yelpcamp} />
-      </PortfolioCard>
-
       <PortfolioCard>
         <PortfolioCardOverlay
           href="https://react-course-2-expensify-th.herokuapp.com/dashboard"
@@ -204,6 +160,51 @@ const Portfolio = () => (
           </PortfolioTextContainer>
         </PortfolioCardOverlay>
         <PortfolioCardImg src={expensify} />
+      </PortfolioCard>
+
+      <PortfolioCard>
+        <PortfolioCardOverlay
+          href="https://codepen.io/devbeatz/full/MGayde/"
+          target="_blank"
+        >
+          <PortfolioTextContainer>
+            <PortfolioCardTitle>QuoteGen</PortfolioCardTitle>
+            <PortfolioCardText>
+              A Donald Trump quote generator.
+            </PortfolioCardText>
+          </PortfolioTextContainer>
+        </PortfolioCardOverlay>
+        <PortfolioCardImg src={quotegen} />
+      </PortfolioCard>
+
+      <PortfolioCard>
+        <PortfolioCardOverlay
+          href="https://websock-chat-app.herokuapp.com/"
+          target="_blank"
+        >
+          <PortfolioTextContainer>
+            <PortfolioCardTitle>ChatApp</PortfolioCardTitle>
+            <PortfolioCardText>
+              Real time WebSocket chat app built on NodeJS backend.
+            </PortfolioCardText>
+          </PortfolioTextContainer>
+        </PortfolioCardOverlay>
+        <PortfolioCardImg src={chatapp} />
+      </PortfolioCard>
+
+      <PortfolioCard>
+        <PortfolioCardOverlay
+          href="https://infinite-tor-55070.herokuapp.com/"
+          target="_blank"
+        >
+          <PortfolioTextContainer>
+            <PortfolioCardTitle>YelpCamp</PortfolioCardTitle>
+            <PortfolioCardText>
+              Website for sharing camping sites, build with NodeJS & Express.
+            </PortfolioCardText>
+          </PortfolioTextContainer>
+        </PortfolioCardOverlay>
+        <PortfolioCardImg src={yelpcamp} />
       </PortfolioCard>
 
       <PortfolioCard>
@@ -224,17 +225,17 @@ const Portfolio = () => (
 
       <PortfolioCard>
         <PortfolioCardOverlay
-          href="https://codepen.io/devbeatz/full/MGayde/"
+          href="https://blog-app-tjh.herokuapp.com/"
           target="_blank"
         >
           <PortfolioTextContainer>
-            <PortfolioCardTitle>QuoteGen</PortfolioCardTitle>
+            <PortfolioCardTitle>BlogApp</PortfolioCardTitle>
             <PortfolioCardText>
-              A Donald Trump quote generator.
+              Blog site, built with a React front end with Firebase backend.
             </PortfolioCardText>
           </PortfolioTextContainer>
         </PortfolioCardOverlay>
-        <PortfolioCardImg src={quotegen} />
+        <PortfolioCardImg src={blogapp} />
       </PortfolioCard>
 
       <PortfolioCard>
@@ -245,7 +246,7 @@ const Portfolio = () => (
           <PortfolioTextContainer>
             <PortfolioCardTitle>TwitchTracker</PortfolioCardTitle>
             <PortfolioCardText>
-              Shows who of your favourite twitch streamers are online.
+              Shows which of your favourite Twitch streamers are online.
             </PortfolioCardText>
           </PortfolioTextContainer>
         </PortfolioCardOverlay>
@@ -258,7 +259,7 @@ const Portfolio = () => (
           target="_blank"
         >
           <PortfolioTextContainer>
-            <PortfolioCardTitle>WkiApi</PortfolioCardTitle>
+            <PortfolioCardTitle>WikiApi</PortfolioCardTitle>
             <PortfolioCardText>
               A styled front end for the Wikipedia search API.
             </PortfolioCardText>

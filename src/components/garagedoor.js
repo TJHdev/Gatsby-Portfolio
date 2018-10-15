@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import background from '../images/background-large.jpeg';
 
+import GaragedoorText from './garagedoor-text-canvas';
+import GaragedoorTextExample from './example';
+
 const BackgroundWrapper = styled.div`
   position: fixed;
   height: 100vh;
@@ -90,10 +93,20 @@ const IntroText = styled.p`
   z-index: 30;
   width: 330px;
 
-  transition: all 1.5s cubic-bezier(0, 0.45, 0.26, 1) ${props => props.delay};
+  transition: all 1.5s cubic-bezier(0.1, 0.69, 0.57, 0.96)
+    ${props => props.delay};
 
   transform: ${props =>
-    props.isHidden ? 'translate(-500%, 0px)' : 'translate(-50%, 0px)'};
+    props.isHidden ? 'translate(-50%, 200px)' : 'translate(-50%, 0px)'};
+
+  opacity: ${props => (props.isHidden ? '0' : '1')};
+`;
+
+const GaragedoorTextExampleContainer = styled.div`
+  z-index: 20;
+  position: absolute;
+  left: 0;
+  top: 0;
 `;
 
 class Garagedoor extends React.Component {
@@ -113,6 +126,7 @@ class Garagedoor extends React.Component {
     const { isHidden } = this.state;
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
+        <GaragedoorTextExampleContainer />
         <BackgroundContainer>
           <Background src={background} alt="background image" />
         </BackgroundContainer>
@@ -149,14 +163,5 @@ Garagedoor.propTypes = {
 
 export default Garagedoor;
 
-// transition: all 1s cubic-bezier(0, 0.45, 0.26, 1) 1s;
-// transform: ${props =>
-//   props.hidden
-//     ? 'translate(-400%, 30px)'
-//     : 'translate(calc(-50% - 4px), 30px)'};
-// z-index: 10;
-
-// font-weight: 800;
-// font-size: 2rem;
-// width: 330px;
-// text-align: center;
+// <GaragedoorTextExample />
+// <GaragedoorText />
