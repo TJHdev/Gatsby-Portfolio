@@ -33,20 +33,16 @@ const WorkExpCardText = styled.p`
 `;
 
 const Card = ({ imgPath, title, text }) => (
-  <WorkExpCard>
-    <WorkExpCardImg src={imgPath} />
-    <WorkExpCardTitle>
-      Jesmond Engineering
-      <HorizontalRule />
-    </WorkExpCardTitle>
-    <WorkExpCardText>
-      This was a summer placement as a Structural Analyst with focus in the
-      aerospace industry. The placement involved heavy use of Excel and Visual
-      Basic for stress calculations and modeling. This placement kick-started my
-      interest in programming through developing small batch files to automate
-      tasks.
-    </WorkExpCardText>
-  </WorkExpCard>
+  <div className="col-1-of-4">
+    <WorkExpCard>
+      <WorkExpCardImg src={imgPath} />
+      <WorkExpCardTitle>
+        {title}
+        <HorizontalRule />
+      </WorkExpCardTitle>
+      <WorkExpCardText>{text}</WorkExpCardText>
+    </WorkExpCard>
+  </div>
 );
 
 Card.propTypes = {
