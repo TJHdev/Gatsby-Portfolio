@@ -56,7 +56,7 @@ const Portfolio = () => (
 
     <PortfolioCardGrid>
       {portfolioData.map(portfoliodata => (
-        <PortfolioCard {...portfoliodata} />
+        <PortfolioCard {...portfoliodata} key={portfoliodata.title} />
       ))}
     </PortfolioCardGrid>
   </SectionContainer>

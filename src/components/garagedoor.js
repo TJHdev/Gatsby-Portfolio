@@ -22,8 +22,6 @@ const BackgroundWrapper = styled.div`
     props.garageDoorUp ? 'rotateX(90deg) scale(1.6)' : 'rotateX(0deg)'};
 `;
 
-const BackgroundContainer = styled.div``;
-
 const Background = styled.img`
   position: fixed;
   top: 50%;
@@ -51,8 +49,9 @@ const Button = styled.button`
   background-color: white;
   color: black;
   border: black solid 1.5px;
-  // border-radius: 5px;
   padding: 0.3rem;
+  margin: 0 5px;
+
   text-transform: uppercase;
   transition: transform 1s ease-in 0.1s;
 
@@ -87,13 +86,12 @@ const IntroTextContainer = styled.div`
 const IntroText = styled.p`
   --verticalOffset: ${props => props.verticalOff};
 
-  z-index: 30;
   position: relative;
-
   z-index: 30;
   width: 330px;
+  padding-bottom: 1.5rem;
 
-  transition: all 1.5s cubic-bezier(0.1, 0.69, 0.57, 0.96)
+  transition: all 0.8s cubic-bezier(0.1, 0.69, 0.57, 0.96)
     ${props => props.delay};
 
   transform: ${props =>
@@ -127,29 +125,24 @@ class Garagedoor extends React.Component {
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
         <GaragedoorTextExampleContainer />
-        <BackgroundContainer>
-          <Background src={background} alt="background image" />
-        </BackgroundContainer>
+        <Background src={background} alt="background image" />
         <HeroButtonContainer>
           <Button onClick={this.showText}>Need a hero?</Button>
         </HeroButtonContainer>
         <IntroTextContainer>
-          <IntroText isHidden={isHidden} delay=".5s" verticalOff="10px">
-            Then you've come to the wrong place...
+          <IntroText isHidden={isHidden} delay=".2s" verticalOff="10px">
+            {"Then you've come to the wrong place..."}
           </IntroText>
-          <br />
-          <IntroText isHidden={isHidden} delay="2s" verticalOff="50px">
-            I can, however build you fully responsive websites, using the latest
-            and greatest techniques.
+          <IntroText isHidden={isHidden} delay="1s" verticalOff="50px">
+            {
+              'I can, however build you fully responsive websites, using the latest and greatest techniques.'
+            }
           </IntroText>
-          <br />
-          <IntroText isHidden={isHidden} delay="3.5s" verticalOff="140px">
-            Click 
-{' '}
-<Button onClick={action}> here </Button>
-{' '}
-to find out more.
-</IntroText>
+          <IntroText isHidden={isHidden} delay="2s" verticalOff="140px">
+            {`Click`}
+            <Button onClick={action}> here </Button>
+            {`to find out more.`}
+          </IntroText>
         </IntroTextContainer>
       </BackgroundWrapper>
     );

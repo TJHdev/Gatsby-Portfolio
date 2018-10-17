@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import HorizontalRule from '../styled-components/HorizontalRule';
 
 const WorkExpCard = styled.div`
+  margin: 1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   font-size: 1.6rem;
@@ -14,14 +15,13 @@ const WorkExpCard = styled.div`
   transition: all 0.3s;
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1);
   }
 `;
 
 const WorkExpCardImg = styled.img`
   width: 100%;
-  height: 20%;
 `;
 
 const WorkExpCardTitle = styled.h3`
@@ -29,7 +29,7 @@ const WorkExpCardTitle = styled.h3`
 `;
 
 const WorkExpCardText = styled.p`
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
 `;
 
 const Card = ({ imgPath, title, text }) => (

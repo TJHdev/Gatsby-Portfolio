@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-import TJHlogo from '../images/TJHlogo.svg';
+import TJHlogo from '../../images/TJHlogo.svg';
 
-const HeaderWrapper = styled.div`
+const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
   max-width: 100%;
-  z-index: 16;
+  z-index: 15;
   position: fixed;
   background: rgba(0.05, 0.05, 0.05, 0.9);
   margin-bottom: 1.45rem;
 `;
 
-const HeaderContainer = styled.div`
+const HeaderNavContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,7 @@ const IconContainer = styled.img`
 const NavButton = styled.button`
   width: 85px;
 
-  z-index: 16;
+  z-index: 15;
 
   font-size: 1rem;
   font-weight: 800;
@@ -47,9 +48,10 @@ const NavButton = styled.button`
 
   outline: none;
 
+  cursor: pointer;
+
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: black;
     background-color: white;
   }
@@ -59,20 +61,45 @@ const NavButton = styled.button`
   }
 `;
 
-const Header = () => (
-  <HeaderWrapper>
+const Header = ({ scrollToChild, action }) => (
+  <HeaderContainer>
     <IconContainer src={TJHlogo} />
-    <HeaderContainer>
+    <HeaderNavContainer>
       <MobileNavButtonContainer>
-        <NavButton>Go outside</NavButton>
-        <NavButton>Experience</NavButton>
+        <NavButton onClick={action}>Go outside</NavButton>
+
+        <NavButton
+          onClick={() => {
+            scrollToChild(3);
+          }}
+        >
+          Experience
+        </NavButton>
       </MobileNavButtonContainer>
       <MobileNavButtonContainer>
-        <NavButton>Skills</NavButton>
-        <NavButton>Portfolio</NavButton>
+        <NavButton
+          onClick={() => {
+            scrollToChild(4);
+          }}
+        >
+          Skills
+        </NavButton>
+
+        <NavButton
+          onClick={() => {
+            scrollToChild(5);
+          }}
+        >
+          Portfolio
+        </NavButton>
       </MobileNavButtonContainer>
-    </HeaderContainer>
-  </HeaderWrapper>
+    </HeaderNavContainer>
+  </HeaderContainer>
 );
+
+Header.propTypes = {
+  scrollToChild: PropTypes.func.isRequired,
+  action: PropTypes.func.isRequired,
+};
 
 export default Header;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import HorizontalRule from '../styled-components/HorizontalRule';
 
@@ -25,5 +26,9 @@ const HeadingBackground = ({ heading }) => (
     <HorizontalRule />
   </HeadingContainer>
 );
+
+HeadingBackground.propTypes = {
+  heading: PropTypes.string.isRequired,
+};
 
 export default HeadingBackground;

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Icon = styled.img`
-  z-index: 10;
+  z-index: 2;
   width: 80px;
-  // background-color: rgba(100, 100, 100, 0.6);
 
   color: white;
   margin-bottom: 1rem;
@@ -22,26 +21,24 @@ const Icon = styled.img`
   &:hover + div {
     z-index: 10;
     color: rgba(255, 255, 255, 1);
-    display: block;
     transform: scale(1);
   }
 `;
 
 const DescriptionContainer = styled.div`
-  z-index: -5;
+  z-index: -2;
   font-size: 1.1rem;
   position: relative;
 
   background-color: rgba(0, 0, 0, 0);
   color: rgba(255, 255, 255, 0);
-  display: block;
   transition: all 0.5s;
   position: relative;
   transform: scale(0.2);
 `;
 
 const Description = styled.div`
-  z-index: 1;
+  z-index: 9;
   position: absolute;
   top: 15px;
   left: -70px;

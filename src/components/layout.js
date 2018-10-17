@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
           meta={[
             {
               name: 'Thomas Hanna Web Development Portfolio',
-              content: 'Sample',
+              content: 'CV',
             },
             {
               name: 'web developer programming javascript',

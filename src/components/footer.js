@@ -32,11 +32,6 @@ const FooterContainer = styled.div`
   padding: 1rem 0.5rem;
 `;
 
-const PageLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-`;
-
 const SocialMediaContainer = styled.div`
   text-align: center;
 `;
