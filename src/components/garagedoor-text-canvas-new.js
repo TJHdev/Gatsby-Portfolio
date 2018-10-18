@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import * as THREE from 'three';
-import * as BAS from 'three-bas';
-import { TweenMax } from 'gsap/TweenMax';
-import PNLTRI from '../static/pnltri.min';
 
-import importedFont from './libs/helvetiker_regular.typeface.json';
+import PNLTRI from './three/pnltri.min';
+import * as THREE from './three/modifiedthree/three';
+import importedFont from './three/droid_sans_bold.typeface';
+
+console.log(THREE);
+console.log(importedFont);
 
 THREE.ShapeUtils.triangulateShape = (contour, holes) => {
   const myTriangulator = new PNLTRI.Triangulator();
@@ -13,8 +14,6 @@ THREE.ShapeUtils.triangulateShape = (contour, holes) => {
 
 class ThreeScene extends Component {
   componentDidMount() {
-    console.log(THREE);
-    console.log(BAS);
     const width = this.mount.clientWidth; // mount is the container div
     const height = this.mount.clientHeight;
     // ADD SCENE
@@ -64,12 +63,9 @@ class ThreeScene extends Component {
   };
 
   createTextAnimation = () => {
-    const fontLoader = new THREE.FontLoader();
-    const font = fontLoader.parse(importedFont);
-
     const inputText = "Then you've come to the wrong place";
     const inputParams = {
-      font,
+      font: 'droid sans',
       size: 80,
       height: 2,
       curveSegments: 12,
@@ -119,7 +115,7 @@ class ThreeScene extends Component {
     const matrix = new THREE.Matrix4().makeTranslation(
       anchorX,
       anchorY,
-      anchorZ,
+      anchorZ
     );
 
     textGeometry.applyMatrix(matrix);
@@ -247,7 +243,7 @@ class ThreeScene extends Component {
       },
       {
         diffuse: 0x000000,
-      },
+      }
     );
 
     THREE.Mesh.call(this, bufferGeometry, material);
@@ -267,31 +263,3 @@ class ThreeScene extends Component {
   }
 }
 export default ThreeScene;
-
-/*
-
-const loader = new THREE.FontLoader();
-let font = loader.load(
-  // resource URL
-  withPrefix('/helvetiker_regular.typeface.json'),
-  // withPrefix('../static/helvetiker_regular.typeface.json'),
-
-  // onLoad callback
-  font => {
-    // do something with the font
-    console.log(this);
-    this.scene.add(font);
-  },
-
-  // onProgress callback
-  xhr => {
-    console.log(`${(xhr.loaded / xhr.total) * 100}% loaded`);
-  },
-
-  // onError callback
-  err => {
-    console.log('An error happened', err);
-  }
-);
-
-*/

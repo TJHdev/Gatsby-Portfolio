@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 import background from '../images/background-large.jpeg';
 
 import GaragedoorText from './garagedoor-text-canvas';
-import GaragedoorTextExample from './example';
+import GaragedoorTextNew from './garagedoor-text-canvas-new';
+// import GaragedoorTextNew from './example';
+
+const GaragedoorContainer = styled.div`
+  position: fixed;
+  left: 0;
+  z-index: 50;
+`;
 
 const BackgroundWrapper = styled.div`
   position: fixed;
@@ -124,6 +131,10 @@ class Garagedoor extends React.Component {
     const { isHidden } = this.state;
     return (
       <BackgroundWrapper garageDoorUp={garageDoorUp}>
+        <GaragedoorContainer>
+          <GaragedoorText />
+          <GaragedoorTextNew />
+        </GaragedoorContainer>
         <GaragedoorTextExampleContainer />
         <Background src={background} alt="background image" />
         <HeroButtonContainer>
@@ -155,6 +166,3 @@ Garagedoor.propTypes = {
 };
 
 export default Garagedoor;
-
-// <GaragedoorTextExample />
-// <GaragedoorText />
