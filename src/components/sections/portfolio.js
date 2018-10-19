@@ -48,8 +48,8 @@ const PortfolioCardGrid = styled.div`
 }
 `;
 
-const Portfolio = () => (
-  <SectionContainer>
+const Portfolio = React.forwardRef((props, ref) => (
+  <SectionContainer ref={ref}>
     <div className="row center">
       <Heading heading="Portfolio" />
     </div>
@@ -60,6 +60,6 @@ const Portfolio = () => (
       ))}
     </PortfolioCardGrid>
   </SectionContainer>
-);
+));
 
 export default Portfolio;

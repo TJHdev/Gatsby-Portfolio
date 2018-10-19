@@ -8,8 +8,8 @@ import WorkExperienceCard from '../common-components/WorkExpCard';
 // data
 import workExperienceData from '../data/workexperienceData';
 
-const WorkExperience = () => (
-  <SectionContainer>
+const WorkExperience = React.forwardRef((props, ref) => (
+  <SectionContainer ref={ref}>
     <div className="row center">
       <Heading heading="Engineering Experience" />
     </div>
@@ -19,6 +19,6 @@ const WorkExperience = () => (
       ))}
     </div>
   </SectionContainer>
-);
+));
 
 export default WorkExperience;

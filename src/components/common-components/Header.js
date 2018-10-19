@@ -61,33 +61,28 @@ const NavButton = styled.button`
   }
 `;
 
-const Header = ({ scrollToChild, action }) => (
+const Header = ({ scrollToChild, targetRefs }) => (
   <HeaderContainer>
     <IconContainer src={TJHlogo} />
     <HeaderNavContainer>
       <MobileNavButtonContainer>
-        <NavButton onClick={action}>Go outside</NavButton>
-
         <NavButton
           onClick={() => {
-            scrollToChild(3);
+            scrollToChild(targetRefs.experience);
           }}
         >
           Experience
         </NavButton>
-      </MobileNavButtonContainer>
-      <MobileNavButtonContainer>
         <NavButton
           onClick={() => {
-            scrollToChild(4);
+            scrollToChild(targetRefs.skills);
           }}
         >
           Skills
         </NavButton>
-
         <NavButton
           onClick={() => {
-            scrollToChild(5);
+            scrollToChild(targetRefs.portfolio);
           }}
         >
           Portfolio
@@ -99,7 +94,7 @@ const Header = ({ scrollToChild, action }) => (
 
 Header.propTypes = {
   scrollToChild: PropTypes.func.isRequired,
-  action: PropTypes.func.isRequired,
+  targetRefs: PropTypes.object.isRequired, // eslint-disable-line
 };
 
 export default Header;

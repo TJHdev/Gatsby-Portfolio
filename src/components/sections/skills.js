@@ -58,8 +58,8 @@ const SkillsIconsContainer = styled.div`
 }
 `;
 
-const Skills = () => (
-  <SectionContainer>
+const Skills = React.forwardRef((props, ref) => (
+  <SectionContainer ref={ref}>
     <div className="row center">
       <Heading heading="Skills" />
     </div>
@@ -70,6 +70,6 @@ const Skills = () => (
       ))}
     </SkillsIconsContainer>
   </SectionContainer>
-);
+));
 
 export default Skills;

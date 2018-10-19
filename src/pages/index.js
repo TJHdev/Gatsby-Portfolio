@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 
 import Layout from '../components/layout';
-import Garagedoor from '../components/garagedoor';
 import Header from '../components/common-components/Header';
 import StickyBackground from '../components/common-components/StickyBackground';
 import WorkExperience from '../components/sections/workexperience';
@@ -18,40 +16,38 @@ const blackTheme = {
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      garageDoorUp: false,
+
+    this.targetRefs = {
+      experience: React.createRef(),
+      skills: React.createRef(),
+      portfolio: React.createRef(),
     };
   }
 
-  toggleGarage = () => {
-    this.setState(prevState => ({
-      garageDoorUp: !prevState.garageDoorUp,
-    }));
-  };
-
-  scrollToChild = childNum => {
-    const node = ReactDOM.findDOMNode(this).children[childNum];
-    node.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'start',
-    });
+  scrollToChild = ref => {
+    const node = ref.current;
+    if (node) {
+      node.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start',
+      });
+    }
   };
 
   render() {
-    const { garageDoorUp } = this.state;
     return (
       <ThemeProvider theme={blackTheme}>
         <Layout>
           <Header
             scrollToChild={this.scrollToChild}
             action={this.toggleGarage}
+            targetRefs={this.targetRefs}
           />
-          <Garagedoor garageDoorUp={garageDoorUp} action={this.toggleGarage} />
           <StickyBackground />
-          <WorkExperience />
-          <Skills />
-          <Portfolio />
+          <WorkExperience ref={this.targetRefs.experience} />
+          <Skills ref={this.targetRefs.skills} />
+          <Portfolio ref={this.targetRefs.portfolio} />
           <Footer />
         </Layout>
       </ThemeProvider>
