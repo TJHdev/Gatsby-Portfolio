@@ -50,7 +50,7 @@ const portfolioData = [
     image: twitchapi,
     link: 'https://codepen.io/devbeatz/full/OZNdBQ/',
     title: 'TwitchTracker',
-    text: 'TwitchTracker',
+    text: 'Shows which of your favourite Twitch streamers are online.',
   },
   {
     image: wikiapi,
