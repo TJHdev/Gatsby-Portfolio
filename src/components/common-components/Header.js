@@ -36,8 +36,9 @@ const NavButton = styled.button`
 
   z-index: 15;
 
+  font-weight: 700;
+
   font-size: 1rem;
-  font-weight: 800;
   background-color: black;
   color: white;
   border: white solid 1px;

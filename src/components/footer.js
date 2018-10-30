@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 // styled components
@@ -39,7 +38,7 @@ const SocialMediaContainer = styled.div`
 const SocialMediaLink = styled.a``;
 
 const SocialMediaIcon = styled.img`
-  height: 50px;
+  width: 40px;
   margin: 1rem;
 `;
 
@@ -55,8 +54,9 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.img`
+  height: 80px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px 15px 0 15px;
 `;
 
 const Footer = () => (

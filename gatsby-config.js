@@ -17,6 +17,15 @@ module.exports = {
         icon: 'src/images/batman.png', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto\:400,700`,
+          // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-styled-components',
   ],

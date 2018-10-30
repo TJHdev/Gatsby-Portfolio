@@ -23,7 +23,8 @@ html {
   width: 100vw;
   max-width: 100%;
   font-size: 62.5%;
-  font-family: 'Lucida Grande', Calibri, 'Arial';
+  font-family: 'Roboto';
+  /* font-family: 'Lucida Grande', Calibri, 'Arial'; */
   text-decoration: none;
 }
 
