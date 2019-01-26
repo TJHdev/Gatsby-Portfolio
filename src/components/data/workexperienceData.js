@@ -25,7 +25,7 @@ const workExperienceData = [
   {
     title: 'Web Development',
     text:
-      'From May 2018, I have been retraining full-time as a web developer. My main target has been to gain a strong grasp of JavaScript, with a secondary goal of becoming familiar with the current JavaScript ecosystem and popular frameworks. The skills section below highlights the technologies with which I am familiar.',
+      'From May 2018, I have been retraining full-time as a web developer. My main target has been to gain a strong grasp of JavaScript, with a secondary goal of becoming familiar with the current JavaScript ecosystem and popular frameworks.',
     imgPath: webdev,
   },
 ];

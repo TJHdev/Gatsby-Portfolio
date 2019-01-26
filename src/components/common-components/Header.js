@@ -69,10 +69,10 @@ const Header = ({ scrollToChild, targetRefs }) => (
       <MobileNavButtonContainer>
         <NavButton
           onClick={() => {
-            scrollToChild(targetRefs.experience);
+            scrollToChild(targetRefs.aboutme);
           }}
         >
-          Experience
+          About Me
         </NavButton>
         <NavButton
           onClick={() => {
@@ -87,6 +87,13 @@ const Header = ({ scrollToChild, targetRefs }) => (
           }}
         >
           Portfolio
+        </NavButton>
+        <NavButton
+          onClick={() => {
+            scrollToChild(targetRefs.experience);
+          }}
+        >
+          Experience
         </NavButton>
       </MobileNavButtonContainer>
     </HeaderNavContainer>

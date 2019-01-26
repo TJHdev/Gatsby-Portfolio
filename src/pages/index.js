@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '../components/layout';
 import Header from '../components/common-components/Header';
 import StickyBackground from '../components/common-components/StickyBackground';
+import AboutMe from '../components/sections/aboutme';
 import WorkExperience from '../components/sections/workexperience';
 import Skills from '../components/sections/skills';
 import Portfolio from '../components/sections/portfolio';
@@ -18,6 +19,7 @@ class IndexPage extends React.Component {
     super(props);
 
     this.targetRefs = {
+      aboutme: React.createRef(),
       experience: React.createRef(),
       skills: React.createRef(),
       portfolio: React.createRef(),
@@ -45,9 +47,10 @@ class IndexPage extends React.Component {
             targetRefs={this.targetRefs}
           />
           <StickyBackground />
-          <WorkExperience ref={this.targetRefs.experience} />
+          <AboutMe ref={this.targetRefs.aboutme} />
           <Skills ref={this.targetRefs.skills} />
           <Portfolio ref={this.targetRefs.portfolio} />
+          <WorkExperience ref={this.targetRefs.experience} />
           <Footer />
         </Layout>
       </ThemeProvider>

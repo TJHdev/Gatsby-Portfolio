@@ -1,3 +1,4 @@
+import eiredeals from '../../images/portfolio/eiredeals.jpg';
 import blogapp from '../../images/portfolio/blogapp.jpg';
 import chatapp from '../../images/portfolio/chatapp.jpg';
 import smartbrain from '../../images/portfolio/smartbrain.jpg';
@@ -5,9 +6,15 @@ import expensify from '../../images/portfolio/expensify.jpg';
 import quotegen from '../../images/portfolio/quotegen.jpg';
 import weatherapp from '../../images/portfolio/weatherapp.jpg';
 import wikiapi from '../../images/portfolio/wikiapi.jpg';
-import twitchapi from '../../images/portfolio/twitchapi.jpg';
 
 const portfolioData = [
+  {
+    image: eiredeals,
+    link: 'https://www.eiredeals.com/',
+    title: 'Éire Deals',
+    text:
+      'Deals website for Ireland. Fullstack application built using React, Express, PostgreSQL and NodeJS',
+  },
   {
     image: smartbrain,
     link: 'https://tjhdev.github.io/TJHdev-AN-Web-Dev-2018-SmartBrain/',
@@ -46,12 +53,6 @@ const portfolioData = [
     title: 'Expensify',
     text:
       'Expense tracking application. React front end with Firebase backend.',
-  },
-  {
-    image: twitchapi,
-    link: 'https://codepen.io/devbeatz/full/OZNdBQ/',
-    title: 'TwitchTracker',
-    text: 'Shows which of your favourite Twitch streamers are online.',
   },
   {
     image: wikiapi,
