@@ -1,5 +1,5 @@
 {
-  "name": "Thomas Hanna Portfolio",
+  "name": "thomas-hanna-portfolio",
   "description": "Thomas Hanna Portfolio",
   "version": "1.0.0",
   "author": "Thomas Hanna",
@@ -42,7 +42,6 @@
     "prettier-eslint": "^8.8.2"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "type": "git"
   }
 }
